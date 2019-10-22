@@ -1,12 +1,12 @@
 Jenkinsfile (Declarative Pipeline)
 pipeline {
-    agent { docker { image 'python:3.5.1' } }
-    stages {
-        stage('build') {
-            steps {
-                sh 'python --version'
-                echo("Hello wrold");
-            }
+    agent any 
+        stages {
+            stage('One') {
+                steps {
+                    sh 'python --version'
+                    echo("Hello wrold");
+                }
+            }   
         }
     }
-}
